@@ -53,16 +53,7 @@ function App() {
   return (
     <div className="App">
 
-      {/* <table>
-    <thead>
-      <NavBar />
-    </thead>
-    <tbody>
-      <DbRecords docs={data} />
-    </tbody>
-  </table> */}
-
-
+  
       <Router>
               <Suspense fallback={<div>Loading...</div>}>
 
