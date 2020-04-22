@@ -20,6 +20,18 @@ router.get('/all', (req, res) => {
     res.json(allDocs);
 });
 
+router.get('/all/:id', (req, res) => {
+
+    let { id } = req.params;
+
+    let allDocs = JSON.parse(readFile(dataFilePath));
+
+    filteredData = allDocs.filter(x => x.id === +id);
+
+    res.json(filteredData);
+
+});
+
 // замести с: router.delete
 router.get('/delete/:docId', (req, res) => {
 
